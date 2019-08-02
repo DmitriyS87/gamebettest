@@ -18,9 +18,9 @@ module.exports = {
       '/api/**': {
         target: '192.168.0.102:8080',
         secure: false,
-        changeOrigin: true,
+        changeOrigin: true
       }
-    },
+    }
   },
   devtool: 'source-map',
   module: {
@@ -59,9 +59,12 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-          },
-        ],
-      },
+            options: {
+              outputPath: 'fonts'
+            }
+          }
+        ]
+      }
     ]
   },
   plugins: [
