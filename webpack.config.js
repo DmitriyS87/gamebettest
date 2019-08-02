@@ -13,10 +13,10 @@ module.exports = {
     port: 1337,
     hot: true,
     publicPath: '/',
-    host: '192.168.0.72',
+    host: '192.168.0.102',
     proxy: {
       '/api/**': {
-        target: '192.168.0.72:8080',
+        target: '192.168.0.102:8080',
         secure: false,
         changeOrigin: true,
       }
@@ -53,7 +53,15 @@ module.exports = {
             }
           }
         ]
-      }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ]
   },
   plugins: [
