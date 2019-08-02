@@ -11,11 +11,8 @@ const App = () => {
       <SVGData />
       <header className="header">
         <Logo />
-
-        <div>CSGObet test task</div>
       </header>
       <main>
-        <div style={{ maxHeight: '100vh', maxWidth: '100vw' }}>hey</div>
         <Chat />
       </main>
     </React.Fragment>

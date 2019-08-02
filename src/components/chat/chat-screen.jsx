@@ -9,7 +9,7 @@ const Container = styled.div`
   left: 0;
   width: 100vw;
   height: 100%;
-  overvlow: auto;
+  overflow: auto;
   background-color: transparent;
 `;
 
