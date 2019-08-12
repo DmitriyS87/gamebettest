@@ -13,10 +13,10 @@ module.exports = {
     port: 1337,
     hot: true,
     publicPath: '/',
-    host: '192.168.0.102',
+    host: '192.168.0.72',
     proxy: {
       '/api/**': {
-        target: '192.168.0.102:8080',
+        target: '192.168.0.72:8080',
         secure: false,
         changeOrigin: true
       }
@@ -35,7 +35,7 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        include: path.resolve(__dirname, 'src/'),
+        include: path.resolve(__dirname, 'src/styles/'),
         use: [
           'style-loader',
           MiniCssExtractPlugin.loader,
