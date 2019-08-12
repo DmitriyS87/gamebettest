@@ -3,14 +3,18 @@ import styled from 'styled-components';
 import ChartBoard from './chat-board';
 
 const Container = styled.div`
-  position: relative;
+  position: absolute;
   display: block;
-  top: 0;
+  top: 1px;
   left: 0;
-  width: 100vw;
   height: 100%;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   background-color: transparent;
+
+  @media (min-width: 600px) {
+    top: 181px;
+  }
 `;
 
 const StyledChartBoard = styled(ChartBoard)`
@@ -33,7 +37,7 @@ const ChatScreen = props => {
 
   return (
     <Container onClick={hanleOutClick}>
-      <StyledChartBoard />
+      <StyledChartBoard onClick={onClick} />
     </Container>
   );
 };

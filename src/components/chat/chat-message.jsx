@@ -1,15 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import SVGIcon from '../svg-icon';
 
 const Container = styled.div`
   height: 98.5px;
-  width: 292px;
+  max-width: 292px;
+  min-width: 250px;
   display: flex;
-  padding: 5px 24px;
-`;
+  margin-bottom: 25px;
+  padding: 5px 5px;
 
-// 132 99 => 66 49.5
+  @media (min-width: 320px) {
+    padding: 5px 24px;
+  }
+`;
 
 const AvatarBox = styled.div`
   width: 66px;
@@ -45,18 +48,56 @@ const TitleRow = styled.div`
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 21px;
 `;
 
-const TitleName = styled.div``;
+const TitleName = styled.div`
+  line-height: 1rem;
+  font-size: 1.5rem;
+`;
 
-const TitleDate = styled.div``;
+const TitleDate = styled.div`
+  color: #6f7d9e;
+  line-height: 1rem;
+  font-size: 1.1rem;
+`;
 
 const MessageRow = styled.div`
-  font-family: 'MullerMedium';
-  font-size: 1.4rem;
+  position: relative;
+  max-width: 227px;
+  height: 57.5px;
+  background-color: #f8f9fb;
+  border-radius: 7px;
+
+  ::before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -7px;
+    left: 1px;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 7px solid #f8f9fb;
+  }
+
+  ::after {
+    content: '';
+    position: absolute;
+    background: white;
+    height: 7px;
+    width: 9px;
+    top: -7px;
+    left: 1px;
+  }
 `;
 
-const Message = styled.div``;
+const Message = styled.div`
+  font-family: 'MullerMedium';
+  font-size: 1.4rem;
+  padding: 15px 35px 15.5px 21.5px;
+  color: #455366;
+`;
 
 const ChatMessage = props => {
   const {
@@ -64,7 +105,7 @@ const ChatMessage = props => {
     date = String(Date()).substr(0, 16),
     user = { avatar: ``, name: `Sven Ivanov` }
   } = props;
-  const { avatar, name } = user;
+  const { name } = user;
 
   return (
     <Container>
