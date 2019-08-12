@@ -1,7 +1,7 @@
 import React from 'react';
-import Logo from './components/logo';
+import PageHeader from './components/page-header';
 import Chat from './components/chat/chat';
-import SVGData from './components/svg-data';
+import SVGData from './components/svg/svg-data';
 import { GlobalStyle } from './styles';
 
 const App = () => {
@@ -9,9 +9,7 @@ const App = () => {
     <React.Fragment>
       <GlobalStyle />
       <SVGData />
-      <header className="header">
-        <Logo />
-      </header>
+      <PageHeader />
       <main>
         <Chat />
       </main>

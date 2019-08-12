@@ -61,15 +61,16 @@ export const GlobalStyle = createGlobalStyle`
   body {
   font-size: 16px;
   font-size: 1.6rem;
+  overflow: hidden;
   }
 
   .app {
   display: flex;
   flex-direction: column;
   background-color: ${userStatusPhotoBg};
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .header {
@@ -88,30 +89,5 @@ export const GlobalStyle = createGlobalStyle`
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-}
-
-.st0 {
-  fill: #0656f9;
-}
-.st1 {
-  filter: url(#Adobe_OpacityMaskFilter);
-}
-.st2 {
-  mask: url(#Ellipse_2774_3_);
-  enable-background: new;
-}
-.st3 {
-  fill-rule: evenodd;
-  clip-rule: evenodd;
-  fill: #0656f9;
-}
-.st4 {
-  fill-rule: evenodd;
-  clip-rule: evenodd;
-  fill: #2db2f0;
-}
-
-.svg_image {
-  overflow: visible;
 }
 `;
