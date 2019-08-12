@@ -12,6 +12,10 @@ const Container = styled.div`
   overflow-x: hidden;
   background-color: transparent;
 
+  @media (min-width: 320px) {
+    top: 108px;
+  }
+
   @media (min-width: 600px) {
     top: 181px;
   }
