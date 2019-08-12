@@ -34404,7 +34404,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  display: block;\n  top: 1px;\n  left: 0;\n  height: 100%;\n  overflow-y: auto;\n  overflow-x: hidden;\n  background-color: transparent;\n\n  @media (min-width: 600px) {\n    top: 181px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  display: block;\n  top: 1px;\n  left: 0;\n  height: 100%;\n  overflow-y: auto;\n  overflow-x: hidden;\n  background-color: transparent;\n\n  @media (min-width: 320px) {\n    top: 181px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
